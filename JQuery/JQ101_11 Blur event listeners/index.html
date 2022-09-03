@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+<input type="text" value="Blur off of me" >
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+                
+                $("input").on("blur", function(){
+                    // const $input = $($(this).val())
+                    // console.log(`focused on this text area ${$(this).val()}`);
+                    console.log("You blurred away");
+                    console.log($(this).val())
+                })
+
+            })
+    </script>
+</body>
+</html>

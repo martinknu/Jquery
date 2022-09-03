@@ -1,0 +1,35 @@
+
+body{
+    width: 100%;
+
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: black;
+}
+
+
+.cbox{
+    background-color: red;
+}
+
+
+.blue{
+    background-color: blue;
+}
+
+
+.cyan{
+    background-color: cyan;
+}
+
+
+.width-100{
+    width: 100%;
+}
+
+
+

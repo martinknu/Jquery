@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Input with attribute to change -->
+<input id="inpu" type="text">
+
+
+<button id="clickme"> Post request</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+            
+
+            
+            $("#clickme").on("click", function(){
+
+                const charnum = $("#inpu").val();
+                console.log(`charnum: ${charnum}`)
+                // AJAX request in jQuery
+                $.post("https://httpbin.org/post",  
+                {"post": `This is the payload ${charnum}`},
+                function(data) {
+                    console.log("Post request was completed");
+                    console.log(data);
+                })
+
+            })
+
+        })
+    </script>
+</body>
+</html>

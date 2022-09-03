@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Button to be clicked -->
+<button id="myButton">
+    My buttton
+</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+                
+                //Most simple version
+                $("button#myButton").click(function(){
+                    console.log("I am clicked");
+                })
+
+                // Mostly used on click button
+                $("button#myButton").on("click", function(){
+                    console.log("I am clicked too");
+                })
+
+                // Best option for dynamic content
+                $(document).on("click", "button", function(){
+                    console.log("I am clicked  333");
+                })
+
+
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+<textarea id="ta01" cols="30" rows="10">
+    my text
+</textarea>
+
+
+<input name="myInput" >
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+                
+                $("#ta01").on("focus", function(){
+                    // const $input = $($(this).val())
+                    // console.log(`focused on this text area ${$(this).val()}`);
+                    console.log("You focused on this text area");
+                })
+
+                $("[name='myInput']").on("focus", function(){
+                    // const $input = $($(this).val())
+                    // console.log(`focused on this text area ${$(this).val()}`);
+                    console.log("You focused on this input");
+                })
+
+            })
+    </script>
+</body>
+</html>

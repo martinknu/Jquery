@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Parent element  -->
+<div id="parent"> 
+    <strong> Bolded words here</strong>
+    <em>Italicized words here</em>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem odit harum voluptatibus maxime illum, dolores cumque nisi animi beatae ipsam nostrum pariatur fugit ea dolor delectus ut culpa natus sed?</p>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+                
+                // Select all in div and remove
+                // $("div *").remove();
+
+                $("div#parent").empty().html("<h1>Hello World</h1>")
+
+                const $parent = $("div#parent");
+                $parent.html("Stuff inhere and no child elements")
+
+
+            })
+    </script>
+</body>
+</html>

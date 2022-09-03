@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+<input type="text" value="hello world"> 
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, hic. Animi accusantium sapiente, qui quod consequatur aspernatur id incidunt tenetur est voluptatum architecto dicta laudantium odio libero culpa amet odit.
+</p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+                // $("h1.customClass").text("This was changed via JQUERY")
+        
+                // $("h1, p").text("Custom title 2");
+                
+                // $("p.customClass2").text("Custom title 3");
+
+                // $("#customId2").text("Changed again");
+                // // Add HTML elements dynamically
+                // $("#dynamicId001").html("<div class='newDynClass01'><h1>Hello world <+++++</h1> </div>");
+
+                // $("section").html("<b> Some text in strong injected via JQUERY <strong>");
+
+                // Get value from input box
+                const value01 = $("input").val();
+                console.log(`The input value is : ${value01}`);
+
+
+                // Get text value from paragraph
+                const value02 = $("p").text();
+                console.log(`The paragraph value is : ${value02}`);
+
+                // Get HTML value from paragraph
+                const value03 = $("p").html();
+                console.log(`The paragraph html is : ${value03}`);
+
+
+
+            })
+    </script>
+</body>
+</html>

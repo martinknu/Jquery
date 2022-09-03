@@ -1,0 +1,12 @@
+
+body{
+    width: 100%;
+
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: black;
+}

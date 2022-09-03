@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link ref="Stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+<h1 class="customClass" id="customId">
+    Hello world
+</h1>
+
+<button class="customClass2">This is my button</button>
+
+<p class="customClass2">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quaerat unde quibusdam nostrum inventore omnis nesciunt corporis deleniti ut nulla totam, minus tempore odit labore illo! Voluptates accusantium soluta necessitatibus?
+</p>
+
+<p id="customId2">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quaerat unde quibusdam nostrum inventore omnis nesciunt corporis deleniti ut nulla totam, minus tempore odit labore illo! Voluptates accusantium soluta necessitatibus?
+</p>
+
+<div id="dynamicId001">
+
+</div>
+
+
+<section>
+<!-- Put some code inhere with JQUERY -->
+</section>
+
+
+<div class="divs1"> This is a JQUERY test page</div>    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+                // $("h1.customClass").text("This was changed via JQUERY")
+        
+                $("h1, p").text("Custom title 2");
+                
+                $("p.customClass2").text("Custom title 3");
+
+                $("#customId2").text("Changed again");
+                // Add HTML elements dynamically
+                $("#dynamicId001").html("<div class='newDynClass01'><h1>Hello world <+++++</h1> </div>");
+
+                $("section").html("<b> Some text in strong injected via JQUERY <strong>");
+
+
+            })
+    </script>
+
+<!-- jQUERY example -->
+    <!-- $(selector).event(function()) {
+
+
+    }) -->
+
+
+
+</body>
+</html>

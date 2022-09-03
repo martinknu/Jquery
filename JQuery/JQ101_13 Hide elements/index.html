@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- Hide / show div -->
+<button id="clickme"> Hide element</button>
+<button id="unhide"> show element</button>
+
+<!-- Remove classes -->
+<button id="removeblue"> Remove blue </button>
+<button id="removewidth"> Remove width</button>
+
+
+<!-- Make element blue -->
+<button id="makeblue"> make element blue</button>
+
+<!-- Make element cyan -->
+<button id="makecyan"> make element cyan</button>
+
+<!-- Box element on page -->
+<div id="box" class="cbox">
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+                console.log("JQuery is loaded");
+            
+
+            // Hide element
+            $("#clickme").on("click", function(e){
+                e.preventDefault();
+                $("#box").hide();
+            })
+
+            // show element 
+            $("#unhide").on("click", function(e){
+                e.preventDefault();
+                $("#box").show();
+            })
+
+            // make blue
+            $("#makeblue").on("click", function(e){
+                $(".cbox").addClass("blue width-100");
+                console.log("Setting blue");
+            })
+
+            // remove blue
+            $("#removeblue").on("click", function(e){
+                $(".cbox").removeClass("blue");
+                console.log("Remove blue");
+            })
+
+            // remove width
+            $("#removewidth").on("click", function(e){
+                $(".cbox").removeClass("width-100");
+                console.log("Remove width");
+            })
+
+            // make blue on timer
+            setTimeout(function() {
+                $(".cbox").addClass("blue");
+                console.log("Setting blue");
+            }, 3000)
+
+
+            // Example using objects
+            const $box = $("#box");
+            const $button = $("#makecyan");
+
+            
+            $button.on("click", function(){
+                $box.addClass("cyan")
+
+            });
+
+
+
+
+
+
+
+
+
+            })
+    </script>
+</body>
+</html>

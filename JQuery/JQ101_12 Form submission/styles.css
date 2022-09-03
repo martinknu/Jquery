@@ -1,0 +1,17 @@
+
+body{
+    background-color: aliceblue;
+}
+
+
+#box{
+    color: blue;
+    min-height: 40px;
+    min-width: 100px;
+    background-color: cyan;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+
